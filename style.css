@@ -1,0 +1,75 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.all{
+    background-color: rgb(250, 242, 242);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin: 2vh 0;
+}
+
+header{
+    text-align: center;
+    padding:20px 0;
+}
+
+/*SearchBar*/
+.searchBar{
+    display: flex;
+    max-width: 400px;
+    margin: 0 auto;
+}
+.searchBar input{
+    width: 100%;
+    padding: 15px 25px 15px 20px;
+    font-size: 14px;
+}
+
+/* PokeCards */
+
+#main{
+    padding: 10px 2%;
+}
+.pokemon-cards{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 10px;
+    row-gap: 10px;
+}
+.pokemon-box{
+    display: grid;
+    padding: 10px 0;
+    margin: 10px 5px;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-areas: 
+    "a a a a a a a a"
+    "b b b b b b b b"
+    ;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.pokemon-box img{
+    width: 250px;
+    grid-area: a;
+    margin: 0 auto;
+}
+.pokemon-box p{
+    grid-area: b;
+    margin: 0 auto;
+    height: 50px;
+}
+.showMore{
+    width: 300px;
+    height: 40px;
+    line-height: 40px;
+    margin: 0 auto;
+    text-align: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}

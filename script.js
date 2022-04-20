@@ -41,117 +41,11 @@ const loadPokemons = async () => {
 const displayPokemons = (pokemonsUnique) => {
     const htmlString = pokemonsUnique
         .map((val) => {
-            if(val.type == "grass"){
                 return `<div class="pokemon-box ${val.type}">
             <img src="${val.img}">
             <p>${val.name.charAt(0).toUpperCase() + val.name.slice(1)}</p>
         </div>
         `;
-            }else if(val.type=="fire"){
-                return `<div style="background-color:#FF8C00" class="pokemon-box">
-            <img src="${val.img}">
-            <p>${val.name.charAt(0).toUpperCase() + val.name.slice(1)}</p>
-        </div>
-        `;
-            }else if(val.type=="normal"){
-                return `<div style="background-color:#FAEBD7" class="pokemon-box">
-            <img src="${val.img}">
-            <p>${val.name.charAt(0).toUpperCase() + val.name.slice(1)}</p>
-        </div>
-        `;
-            }else if(val.type=="fighting"){
-                return `<div style="background-color:#800000" class="pokemon-box">
-            <img src="${val.img}">
-            <p>${val.name.charAt(0).toUpperCase() + val.name.slice(1)}</p>
-            </div>
-            `;
-            }
-            else if(val.type=="water"){
-                return `<div style="background-color:#00CED1" class="pokemon-box">
-            <img src="${val.img}">
-            <p>${val.name.charAt(0).toUpperCase() + val.name.slice(1)}</p>
-            </div>
-            `;
-            }else if(val.type=="electric"){
-                return `<div style="background-color:#FFD700" class="pokemon-box">
-            <img src="${val.img}">
-            <p>${val.name.charAt(0).toUpperCase() + val.name.slice(1)}</p>
-            </div>
-            `;
-            }else if(val.type=="ice"){
-                return `<div style="background-color:#ADD8E6" class="pokemon-box">
-            <img src="${val.img}">
-            <p>${val.name.charAt(0).toUpperCase() + val.name.slice(1)}</p>
-            </div>
-            `;
-            }else if(val.type=="poison"){
-                return `<div style="background-color:#8B008B" class="pokemon-box">
-            <img src="${val.img}">
-            <p>${val.name.charAt(0).toUpperCase() + val.name.slice(1)}</p>
-            </div>
-            `;
-            }
-            else if(val.type=="ground"){
-                return `<div style="background-color:#D2B48C" class="pokemon-box">
-            <img src="${val.img}">
-            <p>${val.name.charAt(0).toUpperCase() + val.name.slice(1)}</p>
-            </div>
-            `;
-            }else if(val.type=="flying"){
-                return `<div style="background-color:#708090" class="pokemon-box">
-            <img src="${val.img}">
-            <p>${val.name.charAt(0).toUpperCase() + val.name.slice(1)}</p>
-            </div>
-            `;
-            }else if(val.type=="psychic"){
-                return `<div style="background-color:#C71585" class="pokemon-box">
-            <img src="${val.img}">
-            <p>${val.name.charAt(0).toUpperCase() + val.name.slice(1)}</p>
-            </div>
-            `;
-            }else if(val.type=="bug"){
-                return `<div style="background-color:#8FBC8F" class="pokemon-box">
-            <img src="${val.img}">
-            <p>${val.name.charAt(0).toUpperCase() + val.name.slice(1)}</p>
-            </div>
-            `;
-            }else if(val.type=="rock"){
-                return `<div style="background-color:#FFE4C4" class="pokemon-box">
-            <img src="${val.img}">
-            <p>${val.name.charAt(0).toUpperCase() + val.name.slice(1)}</p>
-            </div>
-            `;
-            }else if(val.type=="ghost"){
-                return `<div style="background-color:#4B0082" class="pokemon-box">
-            <img src="${val.img}">
-            <p>${val.name.charAt(0).toUpperCase() + val.name.slice(1)}</p>
-            </div>
-            `;
-            }else if(val.type=="dark"){
-                return `<div style="background-color:#4F4F4F" class="pokemon-box">
-            <img src="${val.img}">
-            <p>${val.name.charAt(0).toUpperCase() + val.name.slice(1)}</p>
-            </div>
-            `;
-            }else if(val.type=="dragon"){
-                return `<div style="background-color:#836FFF" class="pokemon-box">
-            <img src="${val.img}">
-            <p>${val.name.charAt(0).toUpperCase() + val.name.slice(1)}</p>
-            </div>
-            `;
-            }else if(val.type=="steel"){
-                return `<div style="background-color:#B0C4DE" class="pokemon-box">
-            <img src="${val.img}">
-            <p>${val.name.charAt(0).toUpperCase() + val.name.slice(1)}</p>
-            </div>
-            `;
-            }else{
-                return `<div style="background-color:#FFB6C1" class="pokemon-box">
-            <img src="${val.img}">
-            <p>${val.name.charAt(0).toUpperCase() + val.name.slice(1)}</p>
-            </div>
-            `;
-            }
         })
         .join('');
 

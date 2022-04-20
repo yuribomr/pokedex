@@ -59,11 +59,17 @@ header{
     width: 250px;
     grid-area: a;
     margin: 0 auto;
+    transition: 0.2s ease-in-out;
+}
+.pokemon-box img:hover{
+    width: 275px;
 }
 .pokemon-box p{
     grid-area: b;
     margin: 0 auto;
     height: 50px;
+    font-size: 15px;
+    transition: 0.2s ease-in-out;
 }
 .showMore{
     width: 300px;
@@ -74,7 +80,75 @@ header{
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
+.checkBoxList{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap:10px;
+    padding: 0 2%;
+    margin-bottom: 10px;
+}
+.checkBoxList button{
+    padding: 5px 15px;
+    border: 1px solid rgba(255,255 ,255,0.8);
+    font-size: 14px;
+    transition: 0.2s ease-in-out;
+    cursor: pointer;
+}
+.checkBoxList button:hover{
+    font-size: 12px;
+}
 /*TYPES*/
 .grass{
     background-color:#00FF7F
+}
+.fire{
+    background-color: #FF8C00;
+}
+.normal{
+    background-color: #FAEBD7;
+}
+.fighting{
+    background-color: #800000;
+}
+.water{
+    background-color: #00CED1;
+}
+.electric{
+    background-color:#FFD700
+}
+.ice{
+    background-color:#ADD8E6
+}
+.poison{
+    background-color:#8B008B
+}
+.ground{
+    background-color:#D2B48C;
+}
+.flying{
+    background-color:#708090
+}
+.psychic{
+    background-color:#C71585
+}
+.bug{
+    background-color:#8FBC8F
+}
+.rock{
+    background-color:#FFE4C4
+}
+.ghost{
+    background-color:#4B0082
+}
+.dark{
+    background-color:#4F4F4F
+}
+.dragon{
+    background-color:#836FFF
+}
+.steel{
+    background-color:#B0C4DE
+}
+.fairy{
+    background-color:#FFB6C1
 }

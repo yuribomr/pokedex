@@ -5,7 +5,6 @@ var box = document.querySelector(".pokemon-box");
 var pokemons = [];
 var checkBoxList = document.querySelector(".checkBoxList");
 
-
 searchBar.addEventListener("keyup", (e) => {
 
     const searchString = e.target.value.toLowerCase();

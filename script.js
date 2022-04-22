@@ -27,10 +27,10 @@ const loadPokemons = async () => {
                 .then(response => response.json())
                 .then(pokemonSingle => {
                     pokemons.push({ name: val.name, img: pokemonSingle.sprites.front_default, type: pokemonSingle.types[0].type.name });
-                    var pokemonsUnique = [...new Set(pokemons)];
                     displayPokemons(pokemons);
                 });  
         })
+        criarBotaoFiltrar();
     } catch (err) {
         console.log(err);
     }
@@ -309,6 +309,25 @@ function filtrarFairy(){
     `;
     pokemonBox.innerHTML = html;
     });
+}
+
+
+const criarBotaoFiltrar = () =>{
+    async function typePokemons(){
+        const res = await fetch("./types.json")
+        const response = await res.json();
+        var pokemonsType = []
+        html = "";
+        response.map((key)=>{
+            keyCapitalized = key.type.charAt(0).toUpperCase() + key.type.slice(1);
+            html = `
+                <button onclick="filtrar${keyCapitalized}()" class="${key.type}">${key.type}</button>
+            `
+            checkBoxList.innerHTML += html;
+        })
+        
+    }
+    typePokemons();   
 }
 
 

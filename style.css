@@ -2,29 +2,33 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Poppins, open-sans;
 }
 
 body{
-    max-width: 1280px;
+    max-width: 1480px;
     margin: 0 auto;
+    background-color: #121212;
 }
 
 .all{
-    background-color: rgb(250, 242, 242);
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     margin: 2vh 0;
+    backdrop-filter: blur(15px);
+    background-color: rgba(255, 255, 255, .05);  
 }
-
 header{
     text-align: center;
     padding:20px 0;
+}
+header h2{
+    color: white;
 }
 
 /*SearchBar*/
 .searchBar{
     display: flex;
     max-width: 400px;
-    margin: 0 auto;
+    margin: 20px auto 0 auto;
 }
 .searchBar input{
     width: 100%;
@@ -52,8 +56,9 @@ header{
     grid-template-areas: 
     "a a a a a a a a"
     "b b b b b b b b"
+    "c c c c c c c c"
     ;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 0 4px 8px 0 rgba(238, 238, 238, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .pokemon-box img{
     width: 250px;
@@ -64,20 +69,28 @@ header{
 .pokemon-box img:hover{
     width: 275px;
 }
-.pokemon-box p{
+.pokemon-box p.name{
     grid-area: b;
+    margin: 0 auto;
+    height: 50px;
+    font-size: 20px;
+    transition: 0.2s ease-in-out;
+}
+.pokemon-box p.type{
+    grid-area: c;
     margin: 0 auto;
     height: 50px;
     font-size: 15px;
     transition: 0.2s ease-in-out;
 }
-.showMore{
+.show-more{
     width: 300px;
     height: 40px;
     line-height: 40px;
     margin: 0 auto;
     text-align: center;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    cursor: pointer;
 }
 
 .checkBoxList{
@@ -99,56 +112,74 @@ header{
 }
 /*TYPES*/
 .grass{
-    background-color:#00FF7F
+    background: rgb(120,250,108);
+    background: linear-gradient(153deg, rgba(120,250,108,1) 0%, rgba(88,107,90,1) 100%);
 }
 .fire{
-    background-color: #FF8C00;
+    background: rgb(255,102,0);
+    background: linear-gradient(153deg, rgba(255,102,0,1) 0%, rgba(101,18,18,1) 100%);
 }
 .normal{
-    background-color: #FAEBD7;
+    background: rgb(255,217,178);
+    background: linear-gradient(153deg, rgba(255,217,178,1) 0%, rgba(102,88,79,1) 100%);
 }
 .fighting{
-    background-color: #800000;
+    background: rgb(177,0,0);
+    background: linear-gradient(153deg, rgba(177,0,0,1) 0%, rgba(74,0,0,1) 100%);
 }
 .water{
-    background-color: #00CED1;
+    background: rgb(0,241,255);
+    background: linear-gradient(153deg, rgba(0,241,255,1) 0%, rgba(1,1,121,1) 100%);
 }
 .electric{
-    background-color:#FFD700
+    background: rgb(255,197,2);
+    background: linear-gradient(153deg, rgba(255,197,2,1) 0%, rgba(120,84,0,1) 100%);
 }
 .ice{
-    background-color:#ADD8E6
+    background: rgb(222,252,255);
+    background: linear-gradient(153deg, rgba(222,252,255,1) 0%, rgba(0,245,255,1) 100%);
 }
 .poison{
-    background-color:#8B008B
+    background: rgb(162,0,255);
+    background: linear-gradient(153deg, rgba(162,0,255,1) 0%, rgba(71,1,96,1) 100%);
 }
 .ground{
-    background-color:#D2B48C;
+    background: rgb(143,84,0);
+    background: linear-gradient(153deg, rgba(143,84,0,1) 0%, rgba(54,32,0,1) 100%);
 }
 .flying{
-    background-color:#708090
+    background: rgb(255,255,255);
+    background: linear-gradient(153deg, rgba(255,255,255,1) 0%, rgba(188,232,255,1) 100%);
 }
 .psychic{
-    background-color:#C71585
+    background: rgb(255,176,248);
+    background: linear-gradient(153deg, rgba(255,176,248,1) 0%, rgba(200,0,209,1) 100%);
 }
 .bug{
-    background-color:#8FBC8F
+    background: rgb(229,255,155);
+    background: linear-gradient(153deg, rgba(229,255,155,1) 0%, rgba(80,107,58,1) 100%);
 }
 .rock{
-    background-color:#FFE4C4
+    background: rgb(255,225,155);
+    background: linear-gradient(153deg, rgba(255,225,155,1) 0%, rgba(107,78,58,1) 100%);
 }
 .ghost{
-    background-color:#4B0082
+    background: rgb(155,159,255);
+    background: linear-gradient(153deg, rgba(155,159,255,1) 0%, rgba(91,58,107,1) 100%);
 }
 .dark{
-    background-color:#4F4F4F
+    background: rgb(156,156,156);
+    background: linear-gradient(153deg, rgba(156,156,156,1) 0%, rgba(15,15,15,1) 100%);
 }
 .dragon{
-    background-color:#836FFF
+    background: rgb(115,167,255);
+    background: linear-gradient(153deg, rgba(115,167,255,1) 0%, rgba(206,101,255,1) 100%);
 }
 .steel{
-    background-color:#B0C4DE
+    background: rgb(193,216,255);
+    background: linear-gradient(153deg, rgba(193,216,255,1) 0%, rgba(44,44,52,1) 100%);
 }
 .fairy{
-    background-color:#FFB6C1
+    background: rgb(255,193,250);
+background: linear-gradient(153deg, rgba(255,193,250,1) 0%, rgba(97,15,66,1) 100%);
 }

@@ -67,7 +67,7 @@ header h2{
     transition: 0.2s ease-in-out;
 }
 .pokemon-box img:hover{
-    width: 275px;
+    transform: scale(1.3);
 }
 .pokemon-box p.name{
     grid-area: b;

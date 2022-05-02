@@ -4,10 +4,8 @@ var showMore = document.querySelector(".show-more");
 var box = document.querySelector(".pokemon-box");
 var pokemons = [];
 var checkBoxList = document.querySelector(".checkBoxList");
-
-showMore.addEventListener("click", () => {
-  showMore.style.display = "none";
-});
+var next = document.querySelector(".nextPage");
+var previous = document.querySelector(".previous-page");
 
 searchBar.addEventListener("keyup", (e) => {
   const searchString = e.target.value.toLowerCase();
@@ -19,9 +17,8 @@ searchBar.addEventListener("keyup", (e) => {
 
 const loadPokemons = async () => {
   try {
-    const res = await fetch(
-      `https://pokeapi.co/api/v2/pokemon?limit=100&offset=0.`
-    );
+    var endpoint = "pokemon";
+    const res = await fetch(`https://pokeapi.co/api/v2/${endpoint}`);
     allPokemons = await res.json();
     allPokemons.results.map((val) => {
       fetch(val.url)
@@ -60,7 +57,7 @@ const displayPokemons = (pokemonsUnique) => {
 
 const criarBotaoFiltrar = () => {
   async function typePokemons() {
-    const res = await fetch("./types.json");
+    const res = await fetch("../json/types.json");
     const response = await res.json();
     html = "";
     response.map((key) => {

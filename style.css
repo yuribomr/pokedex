@@ -23,6 +23,21 @@ header{
 header h2{
     color: white;
 }
+header ul{
+    margin-top: 10px;
+}
+header a{
+    text-decoration: none;
+    background-color: rgba(255, 255, 255, 0.6);
+    padding: 5px 10px;
+    color: #121212;
+    transition: 0.1s ease-in;
+    font-size:14px ;
+}
+header a:hover{
+    background-color: rgba(255, 255, 255, 0.9);
+    font-size: 16px;
+}
 
 /*SearchBar*/
 .searchBar{
@@ -36,8 +51,39 @@ header h2{
     font-size: 14px;
 }
 
-/* PokeCards */
+/* Next - Previous Page*/
+.pagination{
+    margin: 10px auto;
+    width: 30%;
+    display: flex;
+    justify-content: space-around;
+}
+.nextPage{
+    width: 100%;
+    max-width: 120px;
+    padding: 10px 20px;
+    background-color: white;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    text-align: center;
+}
+.previousPage{
+    width: 100%;
+    max-width: 120px;
+    text-align: center;
+    padding: 10px 20px;
+    background-color: white;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+.nextPage:hover{
+    transform: scale(1.03);
+}
+.previousPage:hover{
+    transform: scale(1.03);
+}
 
+/* PokeCards */
 #main{
     padding: 10px 2%;
 }
@@ -67,7 +113,7 @@ header h2{
     transition: 0.2s ease-in-out;
 }
 .pokemon-box img:hover{
-    transform: scale(1.3);
+    transform: scale(1.2);
 }
 .pokemon-box p.name{
     grid-area: b;
